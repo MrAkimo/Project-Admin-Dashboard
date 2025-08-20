@@ -54,7 +54,7 @@ p {
 
 .container {
     display: grid;
-    grid-template: repeat(6, 1fr) / repeat(4, 1fr) ;
+    grid-template: repeat(6, 1fr) /  1fr repeat(3, 2fr) ;
     grid-template-areas:  
     "menu header header header"
     "menu main main main"
@@ -66,12 +66,55 @@ p {
 
 .menu {
     grid-area: menu;
+    background-color: rgb(0, 119, 255);
+    color: white;
+}
+
+.menu-item {
+    list-style: none;
+}
+.menu-item a {
+    text-decoration: none;
+    color:white;
 }
 
 .nav {
     grid-area: header;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+
 }
 
 .home {
+    background-color: azure;
     grid-area: main;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "projects projects announcements"
+    "projects projects announcements"
+    "projects projects trending"
+    "projects projects trending";
+}
+
+.home header {
+    grid-area: header;
+    background-color: rgb(235, 236, 151);
+}
+
+.home .projects {
+    grid-area: projects;
+    background-color: green;
+}
+
+.home .announcements {
+    grid-area: announcements;
+    background-color: aqua;
+}
+
+.home .trending {
+    grid-area: trending;
+    background-color: blueviolet;
 }
