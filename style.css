@@ -54,6 +54,7 @@ p {
 
 .container {
     display: grid;
+    height: 100vh;
     grid-template: repeat(6, 1fr) /  1fr repeat(3, 2fr) ;
     grid-template-areas:  
     "menu header header header"
