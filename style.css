@@ -74,8 +74,27 @@ p {
     list-style: none;
 }
 .menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     text-decoration: none;
+    font-weight: bold;
     color:white;
+    font-size: 1rem;
+    line-height: 1;
+
+}
+
+.icon-menu {
+    width: 5em;
+    height: 5em;
+    fill: white;
+    display: inline;
+}
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: white;
 }
 
 .nav {
