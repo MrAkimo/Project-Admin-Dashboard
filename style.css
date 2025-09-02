@@ -130,9 +130,9 @@ p {
 
 .nav {
     grid-area: header;
-    background-color: antiquewhite;
+    background-color: rgba(255,254,254,255);
     display: grid;
-    grid-template: 1fr / repeat(2, 1fr);
+    grid-template: 1fr 1fr / repeat(2, 1fr);
 
 }
 
@@ -140,9 +140,8 @@ p {
     background-color: azure;
     grid-area: main;
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
     grid-template-areas: 
-    "header header header"
     "projects projects announcements"
     "projects projects announcements"
     "projects projects trending"
@@ -152,6 +151,28 @@ p {
 .home header {
     grid-area: header;
     background-color: rgb(235, 236, 151);
+}
+.nav form {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    padding: 1.5rem;
+}
+
+.nav form input {
+    border-radius: 1rem;
+}
+.icon-search {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: black;
+}
+
+.btn-notifications {
+    border: none;
+}
+
+.user-notifications {
+    display: grid;
 }
 
 .home .projects {
