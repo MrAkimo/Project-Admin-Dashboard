@@ -128,11 +128,14 @@ p {
     fill: rgba(255,254,254,255);
 }
 
-.nav {
+.user-nav {
     grid-area: header;
     background-color: rgba(255,254,254,255);
     display: grid;
     grid-template: 1fr 1fr / repeat(2, 1fr);
+    grid-template-areas: 
+    "search user-notifications"
+    "user-card user-actions";
 
 }
 
@@ -148,12 +151,9 @@ p {
     "projects projects trending";
 }
 
-.home header {
-    grid-area: header;
-    background-color: rgb(235, 236, 151);
-}
-.nav form {
+.user-nav form {
     display: grid;
+    grid-area: search;
     grid-template-columns: 1fr 9fr;
     padding: 1.5rem;
 }
@@ -173,6 +173,41 @@ p {
 
 .user-notifications {
     display: grid;
+    grid-area: user-notifications;
+    grid-template: 1fr / repeat(2, 1fr);
+}
+
+.user-card {
+    display: grid;
+    grid-area: user-card;
+    grid-template: repeat(2, 1fr) / 1fr 4fr;
+    grid-template-areas: 
+    "img user-greeting"
+    "img user-name";
+}
+
+.user-card img {
+    grid-area: img;
+    place-self: center;
+    background-color: red;
+    height: 32px;
+    width: 32px;
+}
+.user-card-greeting {
+    grid-area: user-greeting;
+    align-self: center;
+}
+.user-card-name {
+    grid-area: user-name;
+}
+
+.user-actions {
+    display: grid;
+    grid-area: user-actions;
+    grid-template: 1fr / repeat(3, 1fr);
+    place-self: center;
+}
+.btn-actions {
 }
 
 .home .projects {
