@@ -54,7 +54,7 @@ p {
 
 /* ===LAYOUT PRINCIPAL=== */
 
-.container {
+.wrapper {
     display: grid;
     height: 100vh;
     grid-template: repeat(6, 1fr) /  1fr repeat(3, 2fr) ;
@@ -67,7 +67,7 @@ p {
     "menu main main main";
 }
 
-.container__menu {
+.menu {
     grid-area: menu;
     background-color: rgba(24,147,212,255);
     color: rgba(255,254,254,255);
@@ -126,7 +126,7 @@ p {
 
 
 
-.container__header{
+.header{
     grid-area: header;
     background-color: rgba(255,254,254,255);
     display: grid;
@@ -159,20 +159,20 @@ p {
     fill: rgba(255,254,254,255);
     display: inline;
 }
-.header-main form {
+.header__form-search {
     display: grid;
     grid-area: search;
     grid-template-columns: 1fr 8fr;
     padding: 1.5rem;
 }
 
-.header-main form input {
+.form-search__input {
     border-radius: 1rem;
-    background-color: rgba(255,254,254,255);
+    background-color: rgb(236, 235, 235);
     border: none;
     appearance: none;
 }
-.icon-search {
+.form-search__icon {
     width: 1.5rem;
     height: 1.5rem;
     fill: black;
