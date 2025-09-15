@@ -141,7 +141,7 @@ p {
 }
 
 .main-content {
-    background-color: azure;
+    background-color: rgb(218, 218, 218);
     grid-area: main;
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
@@ -150,6 +150,7 @@ p {
     "projects projects announcements"
     "projects projects trending"
     "projects projects trending";
+    padding: 2rem 1rem;
 }
 
 /* ===COMPONENTES=== */
@@ -278,11 +279,17 @@ p {
     gap: 2rem;
 }
 
-.section-projects {
+.projects {
     grid-area: projects;
     background-color: rgb(218, 218, 218);
 }
 
+.card {
+    background-color: azure;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 8px solid rgb(255, 187, 0);
+}
 .section-announcements {
     grid-area: announcements;
     background-color: aqua;
