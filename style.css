@@ -16,6 +16,12 @@
     p {font-size-adjust: 0.5;}
 }
 
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
@@ -69,6 +75,7 @@ p {
 
 .menu {
     grid-area: menu;
+    padding: 1rem;
     background-color: rgba(24,147,212,255);
     color: rgba(255,254,254,255);
     display: flex;
@@ -76,9 +83,7 @@ p {
     gap: 1rem;
 }
 
-.menu__header {
-    padding: 1rem;
-}
+
 
 .menu__sect1 {
     display: grid;
@@ -284,18 +289,53 @@ p {
     background-color: rgb(218, 218, 218);
 }
 
+.projects__list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-top: 1rem;
+}
+
 .card {
     background-color: azure;
-    padding: 1rem;
+    padding: 1.3rem 1rem;
     border-radius: 8px;
     border-left: 8px solid rgb(255, 187, 0);
+}
+
+.card__description {
+    padding-right: 3rem;
+    color: gray;
+}
+
+.card__actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.card__btn {
+    border: none;
+    background-color: white;
+}
+
+.card__btn:active {
+    transform: translateY(0.2rem);
+}
+.card__btn-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: black;
+    display: inline;
 }
 .section-announcements {
     grid-area: announcements;
     background-color: aqua;
+    margin-left: 1rem;
 }
 
 .sections-trending {
     grid-area: trending;
     background-color: blueviolet;
+    margin-left: 1rem;
 }
