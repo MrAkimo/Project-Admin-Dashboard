@@ -328,7 +328,7 @@ p {
     fill: black;
     display: inline;
 }
-.section-announcements {
+.announcements {
     grid-area: announcements;
     background-color: aqua;
     margin-left: 1rem;
