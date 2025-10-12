@@ -291,9 +291,11 @@ p {
 
 .projects__list {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 1fr;
     margin-top: 1rem;
+    align-items: stretch;
 }
 
 .card {
@@ -302,7 +304,14 @@ p {
     border-radius: 8px;
     border-left: 8px solid rgb(255, 187, 0);
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+.card > * {
+    width: 100%;
+    min-width: 0;
 }
 
 .card__title {
@@ -312,12 +321,17 @@ p {
 .card__description {
     color: gray;
     font-size: large;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    overflow:hidden
+    
 }
 
 .card__actions {
     display: flex;
     gap: 0.5rem;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .card__btn {
