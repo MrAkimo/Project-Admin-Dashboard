@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     line-height: calc(1ex / 0.44);
     height: 100vh;
+    font-family: system-ui, Roboto, Helvetica;
 
 }
 p {
@@ -62,7 +63,6 @@ p {
 
 .wrapper {
     display: grid;
-    height: 100vh;
     grid-template: repeat(6, 1fr) /  1fr repeat(3, 2fr) ;
     grid-template-areas:  
     "menu header header header"
@@ -248,9 +248,7 @@ p {
 
 .profile-img__img {
     place-self: center;
-    background-color: red;
-    height: 150%;
-    width: auto;
+    height: 100%;
     
 }
 
@@ -432,7 +430,6 @@ p {
     border-radius: 50%;
     place-self: center;
     background-color: red;
-    max-width: none;
 }
 .trending__userProfile {
     align-self: center;
